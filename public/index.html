@@ -24,9 +24,35 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>CORONA TRACKER</title>
+    <style>
+      .wrapper {
+          text-align: center;
+      }
+
+      .button {
+          position: upper;
+          top: 50%;
+      }
+    </style>
   </head>
-  <body>
+  <body >
+    <div class="wrapper">
+      <button class="button" onclick="changeColor()">Change Theme</button>
+  </div>
+  <br><br>
+    <script>
+        var place =0;
+        function changeColor() {
+            // your color list
+            var colorList = ["papayawhip","white"];
+            // set the color
+            document.body.style.backgroundColor = colorList[place]; 
+            place++;
+            // if place is greater than the list size, reset
+            if (place ===colorList.length) place=0; 
+        }
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
